@@ -2,10 +2,7 @@
 
 	xmlns:context="http://www.springframework.org/schema/context"
 
-
-
-
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 	xsi:schemaLocation="
 
@@ -17,8 +14,11 @@
 
     http://www.springframework.org/schema/context/spring-context.xsd    
 
-        
+    http://www.springframework.org/schema/mvc
 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd    
+
+   
     ">
 
 
@@ -27,7 +27,9 @@
 
 
 
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean id="viewResolver"
+
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
 
 
@@ -44,6 +46,13 @@
 
 
 
+	<!-- Loading static resources -->
+
+	<mvc:annotation-driven />
+
+
+
+	<mvc:resources location="/assets/" mapping="/resources/**" />
 
 
 
