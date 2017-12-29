@@ -6,7 +6,9 @@ import com.ezone.Ezonebackend.dto.Category;
 
 public interface CategoryDAO {
 	
-List<Category> list();	
+	Category get(int id);
+
+	List<Category> list();
 	
 	
 	
