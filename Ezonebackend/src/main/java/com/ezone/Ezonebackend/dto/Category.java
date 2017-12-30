@@ -1,5 +1,8 @@
 package com.ezone.Ezonebackend.dto;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Category {
 private int id;
 public int getId() {

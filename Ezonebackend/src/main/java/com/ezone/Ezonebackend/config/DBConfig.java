@@ -25,6 +25,9 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+
+
 @Configuration
 @ComponentScan(basePackages = { "com.ezone.Ezonebackend.dto" } )
 @EnableTransactionManagement
@@ -93,7 +96,7 @@ public class DBConfig {
 
 			builder.addProperties(getHibernateProperties());
 
-			builder.scanPackages("net.kzn.shoppingbackend.dto");
+			builder.scanPackages("com.ezone.Ezonebackend.dto");
 
 			
 
@@ -121,7 +124,7 @@ public class DBConfig {
 
 			
 
-			properties.put("hibernate.dialect", DATABASE_DIALECT);		
+			properties.put("hibernate.dialect", DATABASE_DIALECT);	//Specifying the dialect property	
 
 			properties.put("hibernate.show_sql", "true");
 
