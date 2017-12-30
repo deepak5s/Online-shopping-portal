@@ -57,6 +57,8 @@ public class PageController {
 		return mv;
 
 	}
+	
+
 	/*
 
 	 * Methods to load all the products and based on category

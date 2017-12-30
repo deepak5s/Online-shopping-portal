@@ -2,14 +2,14 @@
 	<h1 class="my-4">Shop By Category</h1>
 	<div class="list-group">
 
-		<c:forEach items="${categories}" var="category">
 		
-		
-			<a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item">${category.name}</a>
-		
-		
-		
-		</c:forEach>
+
+	<c:forEach items="${categories}" var="category">
+
+		<a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item" id="a_${category.name}">${category.name}</a>
+
+	</c:forEach>
+
 
 		
 			
