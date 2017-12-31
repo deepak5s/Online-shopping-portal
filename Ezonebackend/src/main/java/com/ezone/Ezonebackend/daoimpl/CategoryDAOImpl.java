@@ -1,54 +1,71 @@
 package com.ezone.Ezonebackend.daoimpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ezone.Ezonebackend.dao.CategoryDAO;
 import com.ezone.Ezonebackend.dto.Category;
 
 @Repository("categoryDAO")
+
+@Transactional
 public class CategoryDAOImpl implements CategoryDAO {
+	@Autowired
 
-	private static List<Category> categories = new ArrayList<>();
-
-	static {
-		Category category = new Category();
-		// adding first category
-		category.setId(1);
-		category.setName("Tv");
-		category.setDescription("Aacha he");
-		category.setImageURL("Cat1_png");
-		category.setActive(true);
-		categories.add(category);
-
-		// adding second category
-		category = new Category();
-		category.setId(2);
-		category.setName("Mobile");
-		category.setDescription("Aacha he");
-		category.setImageURL("Cat12_png");
-		category.setActive(true);
-		categories.add(category);
-
-	}
+	private SessionFactory sessionFactory;
 
 	@Override
+
 	public List<Category> list() {
-		// TODO Auto-generated method stub
-		return categories;
+
+		String selectActiveCategory = "FROM Category WHERE active = :active";
+
+		Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
+
+		query.setParameter("active", true);
+
+		return query.getResultList();
+
+	}
+
+	/*
+	 * 
+	 * Getting single category based on id
+	 * 
+	 */
+
+	@Override
+
+	public Category get(int id) {
+
+		return sessionFactory.getCurrentSession().get(Category.class, Integer.valueOf(id));
+
 	}
 
 	@Override
-	public Category get(int id) {
-		// Enhanced for loop
-		for (Category category : categories) {
-			if (category.getId() == id)
-				return category;
-		}
 
-		return null;
+	public boolean add(Category category) {
+
+		try {
+
+			// add the category to the database table
+
+			sessionFactory.getCurrentSession().persist(category);
+
+			return true;
+
+		} catch (Exception ex) {
+
+			ex.printStackTrace();
+
+			return false;
+
+		}
 
 	}
 
