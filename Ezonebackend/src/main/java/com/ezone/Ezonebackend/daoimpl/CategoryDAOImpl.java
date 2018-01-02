@@ -69,4 +69,56 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	}
 
+	/*
+	 * 
+	 * Updating a single category
+	 * 
+	 */
+
+	@Override
+
+	public boolean update(Category category) {
+
+		try {
+
+			// add the category to the database table
+
+			sessionFactory.getCurrentSession().update(category);
+
+			return true;
+
+		} catch (Exception ex) {
+
+			ex.printStackTrace();
+
+			return false;
+
+		}
+
+	}
+
+	@Override
+
+	public boolean delete(Category category) {
+
+		category.setActive(false);
+
+		try {
+
+			// add the category to the database table
+
+			sessionFactory.getCurrentSession().update(category);
+
+			return true;
+
+		} catch (Exception ex) {
+
+			ex.printStackTrace();
+
+			return false;
+
+		}
+
+	}
+
 }

@@ -66,19 +66,18 @@ public class CategoryTestCase {
 
 		
 
-		category.setName("Laptop");
+		category.setName("Television");
 
-		category.setDescription("This is some description for laptop!");
+		category.setDescription("This is some description for TV!");
 
-		category.setImageURL("CAT_105.png");
+		category.setImageURL("CAT_101.png");
 
 		
 
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
+	
 
-		
-
-		
+	
 
 	}
 
@@ -86,73 +85,73 @@ public class CategoryTestCase {
 
 	
 
-/*	@Test
-
-	public void testGetCategory() {
-
-		
-
-		category = categoryDAO.get(3);
-
-		
-
-		
-
-		assertEquals("Successfully fetched a single category from the table!","Television",category.getName());
-
-		
-
-		
-
-	}
-
-	*/
+//	@Test
+//
+//	public void testGetCategory() {
+//
+//		
+//
+//		category = categoryDAO.get(1);
+//
+//		
+//
+//		
+//
+//		assertEquals("Successfully fetched a single category from the table!","Laptop",category.getName());
+//
+//		
+//
+//		
+//
+//	}
 
 	
 
-/*	@Test
+	
 
-	public void testUpdateCategory() {
+//	@Test
+//
+//	public void testUpdateCategory() {
+//
+//		
+//
+//		category = categoryDAO.get(1);
+//
+//		
+//
+//		category.setName("TV");
+//
+//		
+//
+//		assertEquals("Successfully updated a single category in the table!",true,categoryDAO.update(category));
+//
+//		
+//
+//		
+//
+//	}
 
-		
-
-		category = categoryDAO.get(3);
-
-		
-
-		category.setName("TV");
-
-		
-
-		assertEquals("Successfully updated a single category in the table!",true,categoryDAO.update(category));
-
-		
-
-		
-
-	}
-
-	*/
+	
 
 
 
-/*	@Test
-
-	public void testDeleteCategory() {
-
-		
-
-		category = categoryDAO.get(3);		
-
-		assertEquals("Successfully deleted a single category in the table!",true,categoryDAO.delete(category));
-
-		
-
-		
-
-	}
-
-*/	
+//	@Test
+//
+//	public void testDeleteCategory() {
+//
+//		
+//
+//		category = categoryDAO.get(1);		
+//
+//		assertEquals("Successfully deleted a single category in the table!",true,categoryDAO.delete(category));
+//
+//		
+//
+//		
+//
+//	}
+//
+//	
 
 /*	
 
