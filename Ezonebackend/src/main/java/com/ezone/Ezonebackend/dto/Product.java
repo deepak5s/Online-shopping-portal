@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
 	// private fields are here
@@ -16,26 +19,19 @@ public class Product {
 	private String code;
 	private String name;
 	private String brand;
+
+	@JsonIgnore
 	private String description;
 	@Column(name = "unit_Price")
 	private double unit_Price;
 
-	
-	//Constructor & Code will get the unique id	
-public Product() {
-
-		
+	// Constructor & Code will get the unique id
+	public Product() {
 
 		this.code = "PRD" + UUID.randomUUID().toString().substring(26).toUpperCase();
 
-		
-
 	}
-	
-	
-	
-	
-	
+
 	public int getId() {
 		return id;
 	}
@@ -133,24 +129,21 @@ public Product() {
 	}
 
 	private int quantity;
-	@Column(name="is_active")
+
+	@Column(name = "is_active")
+	@JsonIgnore
 	private boolean active;
-	
-	
-	@Column(name="category_id")
+
+	@Column(name = "category_id")
+	@JsonIgnore
 	private int categoryId;
-	
-	@Column(name="supplier_id")
+
+	@Column(name = "supplier_id")
+	@JsonIgnore
 	private int supplierId;
-	
+
 	private int purchases;
 
 	private int views;
-
-	
-	
-	
-	
-	
 
 }

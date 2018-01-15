@@ -36,7 +36,7 @@ public class DBConfig {
 	
 	// Change the below based on the DBMS you choose
 
-		private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/ezone";
+		private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/shopping";
 
 		private final static String DATABASE_DRIVER = "org.h2.Driver";
 
