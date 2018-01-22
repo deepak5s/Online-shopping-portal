@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="about-section paddingTB60 gray-bg">
                 <div class="container">
                     <div class="row">
@@ -23,20 +23,7 @@
 								    BY 
 
 		                           INDUS INC. TEAM</p>
-						<div class="about-icons"> 
-                            <ul >
-                                <li><a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a> </li>
-                                <li><a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a> </li>
-                                <li> <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> </li>
-                                <li> <a href="mailto:deepak_conio.h@hotmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a> </li>
-                            </ul>       
-               
-               
-	           
-	           
-	        
-	        </div>
-							</div>
+						</div>
 						</div>
 						<div class="col-md-5 col-sm-6">
 							<div class="about-img">

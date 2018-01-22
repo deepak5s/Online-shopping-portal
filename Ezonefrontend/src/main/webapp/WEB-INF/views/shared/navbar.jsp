@@ -1,28 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-       <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="${contextRoot}/home">EZONE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="about">
+                        <a href="${contextRoot}/aboutus">About</a>
+                    </li>
 
-        <a class="navbar-brand" href="${contextRoot}/home">EZONE</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-          <li class="nav-item active" id="listproducts">
-              <a class="nav-link" href="${contextRoot}/show/all/products">Products</a>
-            </li>
-            
-            
-            <li class="nav-item active" id="about">
-              <a class="nav-link" href="aboutus">About</a>
-            </li>
-            
-            <li class="nav-item active" id="contact">
-              <a class="nav-link" href="contactus">Contact</a>
-            </li>
-          </ul>
+                    <li id="contact">
+                        <a href="${contextRoot}/contactus">Contact</a>
+                    </li>
+                    
+                    <li id="listProducts">
+                        <a href="${contextRoot}/show/all/products">View Products</a>
+                    </li>
+					
+                </ul>
+			    
+			   
+						
+						     
+                
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </div>
+        <!-- /.container -->
     </nav>
