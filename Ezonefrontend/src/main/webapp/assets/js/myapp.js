@@ -1,13 +1,12 @@
 $(function() {
-	
+
 	// for adding a loader
-	$(window).load(function(){
+	$(window).load(function() {
 		setTimeout(function() {
 			$(".se-pre-con").fadeOut("slow");
-		}, 500);			
-	});	
-	
-	
+		}, 500);
+	});
+
 	// solving the active menu problem
 	switch (menu) {
 
@@ -25,7 +24,7 @@ $(function() {
 		break;
 	case 'Shopping Cart':
 		$('#userModel').addClass('active');
-		break;		
+		break;
 	default:
 		if (menu == "Home")
 			break;
@@ -33,32 +32,73 @@ $(function() {
 		$('#a_' + menu).addClass('active');
 		break;
 	}
-	
-	
-	var products = [
-		
-		['1','ABC'],
-		
-		['2','ABCD'],
-		
-		['3','ABCDE'],
-		
-		
-		
-	];
-	
+
 	var $table = $('#productListTable')
-	//exec
-	if($table.length){
-		$table.DataTable({
+	//execute the below code when we have below table
+	if ($table.length) {
+
+		var jsonUrl = '';
+		if (window.categoryId == '') {
+			jsonUrl = window.contextRoot + '/json/data/all/products'; // yha single coat ka matlab he agr user ne url ke thru all category data dekhana chaha tha 
+		}
 			
-			data : products
+		//if user have categoryid so we will follow this code 
+		else {
+
+			jsonUrl =  window.contextRoot + '/json/data/category/'
+			+ window.categoryId + '/products';//window .categoey id is fetched the dynmaic id from my app.js	
+		}
+
+		$table.DataTable({
+			lengthMenu : [ [ 3, 5, 10, -1 ],
+					[ '3 Records', '5 Records', '10 Records', 'ALL' ] ],
+			pageLength : 5,
+			
+			
+			ajax : {
+				url : jsonUrl,
+				dataSrc : ''
+			},
+			
+			columns : [
+				{
+					
+					data : 'name'
+				},
+				
+	{
+					
+					data : 'brand'
+				},
+				
+	{
+					
+					data : 'unit_Price'
+				},
+				
+	{
+					
+					data : 'quantity'
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			]
+			
+			
+			
+	
 		});
-		
-		
+
 	}
-	
-	
-	
-	
+
 });

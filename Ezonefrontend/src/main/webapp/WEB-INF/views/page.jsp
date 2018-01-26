@@ -69,6 +69,9 @@
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
+<!-- Bootstrap Datatable CSS -->
+
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 
 

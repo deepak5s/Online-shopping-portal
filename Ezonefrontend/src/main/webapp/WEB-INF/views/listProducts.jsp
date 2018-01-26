@@ -44,7 +44,7 @@
 
 						<script>
 
-							window.categoryId = '';
+							window.categoryId = '${category.id}';//here window is global object
 
 						</script>
 
@@ -140,9 +140,12 @@
 
 							<tr>
 
-								<th>Id</th>
+								
 
 								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Quantity</th>
 
 								
 
@@ -151,6 +154,27 @@
 						
 
 						</thead>
+
+						<tfoot>
+
+						
+
+							<tr>
+
+								
+
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th>
+								<th>Quantity</th>
+
+								
+
+							</tr>
+
+						
+
+						</tfoot>
 
 					
 
