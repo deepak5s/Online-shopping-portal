@@ -141,12 +141,12 @@
 							<tr>
 
 								
-
+                                  <th></th>
 								<th>Name</th>
 								<th>Brand</th>
 								<th>Price</th>
 								<th>Quantity</th>
-
+                                  <th></th>
 								
 
 							</tr>
@@ -162,12 +162,12 @@
 							<tr>
 
 								
-
+                                 <th></th>
 								<th>Name</th>
 								<th>Brand</th>
 								<th>Price</th>
 								<th>Quantity</th>
-
+                                  <th></th>
 								
 
 							</tr>

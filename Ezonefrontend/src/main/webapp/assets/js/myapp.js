@@ -61,6 +61,22 @@ $(function() {
 			},
 			
 			columns : [
+				
+{
+					
+					data : 'code',
+					mRender : function(data, type, row){
+						return '<img src="'+ window.contextRoot+'/resources/images/'+data+'.jpg" class="dataTableImg"/>';
+						
+						
+					}
+				},
+				
+				
+				
+				
+				
+				
 				{
 					
 					data : 'name'
@@ -73,12 +89,27 @@ $(function() {
 				
 	{
 					
-					data : 'unit_Price'
+					data : 'unit_Price',
+						mRender : function(data, type, row) {
+							return '&#8377; ' + data
+						}
 				},
 				
 	{
 					
 					data : 'quantity'
+				},
+          {
+					
+					data : 'id',
+					bSortable: false,
+					mRender: function(data,type,row){
+						var str= '';
+						str += '<a href="'+ window.contextRoot+ 'show/'+ data + '/products" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;'
+						str += '<a href="'+ window.contextRoot+ 'cart/add/'+ data + '/products" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
+						
+						return str;
+					}
 				}
 				
 				
