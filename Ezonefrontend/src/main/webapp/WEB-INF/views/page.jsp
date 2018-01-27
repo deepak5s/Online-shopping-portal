@@ -159,7 +159,7 @@
 
 			
 
-			<!-- Load only when user clicks contact -->
+			<!-- Load only when user clicks products -->
 
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 
@@ -168,7 +168,13 @@
 			</c:if>	
 
 			
+<!-- Load only when user clicks to show the single product -->
 
+			<c:if test="${userClickShowProduct == true  }">
+
+				<%@include file="singleProduct.jsp"%>
+
+			</c:if>	
 			
 
 									
