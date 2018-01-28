@@ -40,7 +40,7 @@
 
 
 </div>
-<!-- Display the product description -->	
+      <!-- Display the product description -->	
 		<div class="col-xs-12 col-sm-8">
 		
 			<h3>${product.name}</h3>
@@ -58,6 +58,6 @@
 
 </div>
 
-</div>
+
 
 
