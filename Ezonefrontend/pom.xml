@@ -24,16 +24,6 @@
 
 		</dependency>
 
-
-
-
-
-
-
-
-
-
-
 		<!-- JAVAEE DEPENDENCY -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -51,7 +41,31 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- SPRING WEB-MVC DEPENDENCY -->
+		<!-- SPRING DEPENDENCY -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+
+			<exclusions>
+
+				<exclusion>
+
+					<groupId>commons-logging</groupId>
+
+					<artifactId>commons-logging</artifactId>
+
+				</exclusion>
+
+			</exclusions>
+
+		</dependency>
+
+
+
+
+
 
 		<dependency>
 			<groupId>org.springframework</groupId>
