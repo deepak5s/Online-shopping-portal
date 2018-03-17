@@ -12,6 +12,7 @@ import com.ezone.Ezonebackend.dao.CategoryDAO;
 import com.ezone.Ezonebackend.dao.ProductDAO;
 import com.ezone.Ezonebackend.dto.Category;
 import com.ezone.Ezonebackend.dto.Product;
+import com.ezone.Ezonefrontend.exception.ProductNotFoundException;
 
 @Controller
 public class PageController {
@@ -119,11 +120,12 @@ public class PageController {
 	}
 
 	@RequestMapping(value = "/show/{id}/product")
-	public ModelAndView showSingleProduct(@PathVariable int id) {
+	public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
 
 		ModelAndView mv = new ModelAndView("page");
 
 		Product product = productDAO.get(id);
+		if(product==null) throw new ProductNotFoundException();
 
 		// update the view count
 		product.setViews(product.getViews() + 1);
