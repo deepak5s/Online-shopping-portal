@@ -73,7 +73,7 @@ public class ProductTestCase {
 	 
 product = productDAO.get(2);
  
- product.setName("Samsung  J2");
+ product.setQuantity(0);
  
  assertEquals("Something went wrong while updating the existing record!",
 
